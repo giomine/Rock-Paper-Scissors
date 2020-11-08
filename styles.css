@@ -1,0 +1,395 @@
+body {
+  background: radial-gradient(ellipse at top, hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 750px;
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  color: hsl(217, 16%, 45%);
+  font-size: 4.5rem;
+  margin: 0;
+  line-height: 0.8;
+}
+
+h2 {
+  color: white;
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin: 0;
+  line-height: 0.9;
+}
+
+h3 {
+  color: hsl(214, 47%, 23%);
+  font-size: 2rem;
+}
+
+h4 {
+  color: white;
+  font-weight: 500;
+  letter-spacing: 4px;
+  margin: 0 10px;
+}
+
+h5 {
+  color: hsl(229, 54%, 55%);
+  margin: 0;
+  padding-bottom: 10px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  font-size: 0.95rem;
+  position: relative;
+  top: 2px;
+}
+
+h6 {
+  color: white;
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 3px;
+}
+
+p {
+  color: white;
+  font-size: 1.3rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+.rules-button {
+  position: absolute;
+  border: 2px solid hsl(217, 15%, 55%);
+  border-radius: 10px;
+  width: 125px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: hsl(237, 49%, 15%);
+  right: 50px;
+  bottom: 50px;
+  outline: none;
+}
+
+.rules-button:hover {
+  border: 2px solid hsl(217, 15%, 80%);
+  background: hsl(236, 35%, 25%);
+}
+
+.next-btn {
+  display: none;
+  position: absolute;
+  bottom: 50px;
+  right: 180px;
+  border: 2px solid green;
+  border-radius: 10px;
+  width: 125px;
+  height: 40px;
+  outline: none;
+  opacity: 0.8;
+  background: hsl(90, 100%, 49%);
+}
+
+.next-btn:hover {
+  background: hsl(90, 100%, 59%);
+}
+
+.next-text {
+  color: black;
+  font-weight: 600;
+  letter-spacing: 3px;
+}
+
+.score-block {
+  width: 50%;
+  border: solid 3px hsl(217, 20%, 41%);
+  border-radius: 15px;
+  display: flex;
+  justify-content: space-between;
+  margin: 30px 0 50px;
+}
+
+.game-title {
+  margin: 15px 20px 15px 30px;
+  display: flex;
+  align-items: center;
+}
+
+.score-counter {
+  width: 140px;
+  height: 114px;
+  background: white;
+  border-radius: 10px;
+  margin: 15px 30px 15px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.game-block {
+  height: 450px;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(images/bg-triangle.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.fight-block-one, .fight-block-two, .fight-block-three {
+  display: none;
+  height: 350px;
+  width: 50%;
+  padding-bottom: 100px;
+}
+
+.fight-circle-paper, .fight-circle-rock, .fight-circle-scissors {
+  border-radius: 50%;
+  height: 180px;
+  width: 180px;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fight-circle-paper {
+  border: 30px solid hsl(230, 89%, 62%);
+}
+
+.paper-border {
+  border: 30px solid hsl(230, 89%, 62%);
+}
+
+.fight-circle-rock {
+  border: 30px solid hsl(349, 71%, 52%);
+}
+
+.rock-border {
+  border: 30px solid hsl(349, 71%, 52%);
+}
+
+.fight-circle-scissors {
+  border: 30px solid hsl(39, 89%, 49%);
+}
+
+.scissors-border {
+  border: 30px solid hsl(39, 89%, 49%);
+}
+
+.fight-img, .opponent-fight-img {
+  width: 80px;
+}
+
+.opponent-circle {
+  border-radius: 50%;
+  height: 180px;
+  width: 180px;
+  background: hsl(237, 49%, 15%);
+  /* border: 30px solid hsl(222, 49%, 20%); */
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* position: relative;
+  left: 8px; */
+}
+
+.inner-fight-block {
+  width: 90%;
+  margin: 30px 0 0 30px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.fight-title {
+  width: 62%;
+  margin: auto 0 auto 150px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.you {
+  position: relative;
+  right: 20px;
+}
+
+.them {
+  position: relative;
+  left: 15px;
+}
+
+.paper-circle, .rock-circle, .scissors-circle {
+  border-radius: 50%;
+  height: 130px;
+  width: 130px;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.paper-circle {
+  border: 20px solid hsl(230, 89%, 62%);
+  position: relative;
+  bottom: 130px;
+  left: 40px;
+}
+
+.paper-circle:hover {
+  border: 20px solid hsl(230, 88%, 69%);
+}
+
+.rock-circle {
+  border: 20px solid hsl(349, 71%, 52%);
+  position: relative;
+  top: 80px;
+}
+
+.rock-circle:hover {
+  border: 20px solid hsl(349, 71%, 62%);
+}
+
+.scissors-circle {
+  border: 20px solid hsl(39, 89%, 49%);
+  position: relative;
+  bottom: 130px;
+  right: 40px;
+}
+
+.scissors-circle:hover {
+  border: 20px solid hsl(39, 85%, 65%);
+}
+
+.modal {
+  display: none;
+  position: absolute;
+  bottom: 175px;
+  height: 390px;
+  width: 380px;
+  background: white;
+  border-radius: 10px;
+  z-index: 2;
+}
+
+.modal-content {
+  width: 320px;
+  margin: auto;
+}
+
+.modal-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-title {
+  width: 320px;
+  margin: 20px 0 30px;
+}
+
+.close {
+  font-size: 3.5rem;
+  color: hsl(217, 16%, 65%);
+  height: 38px;
+  margin: 20px 0 30px;
+  padding-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.close:hover, .close:focus {
+  color: hsl(214, 47%, 23%);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.rules-img {
+  margin: 0 8px;
+}
+
+.end {
+  display: none;
+  position: absolute;
+  top: 395px;
+  height: 170px;
+  width: 340px;
+  border-radius: 10px;
+}
+
+.show-result {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.winner {
+  color: white;
+}
+
+.again {
+  margin-top: 20px;
+  border: 2px solid hsl(217, 15%, 55%);
+  border-radius: 10px;
+  width: 160px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: hsl(237, 49%, 15%);
+  outline: none;
+}
+
+.again:hover {
+  border: 2px solid hsl(217, 15%, 80%);
+  background: hsl(236, 35%, 25%);
+}
+
+.lastleft {
+  position: relative;
+  right: 135px;
+}
+
+.lastright {
+  position: relative;
+  left: 150px;
+}
+
+.lastlefttext {
+  position: relative;
+  right: 155px;
+}
+
+.lastrighttext {
+  position: relative;
+  left: 165px;
+}
+
+/* try to add the radial background around the winner */
+.youwin {
+  background: radial-gradient(ellipse at top, hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+  background-repeat: no-repeat;
+}
+
+.theywin {
+
+}

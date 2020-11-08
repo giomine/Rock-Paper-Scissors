@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Rock Paper Scissors</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <!-- <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style> -->
+</head>
+<body>
+
+  <div class="score-block">
+    <div class="game-title">
+      <h2>ROCK<br>PAPER<br>SCISSORS</h2>
+    </div>
+    <div class="score-counter">
+      <h5>SCORE</h5>
+      <h1>12</h1>
+    </div>
+
+  </div>
+
+  <div class="game-block">
+    <div class="one">
+      <div class="paper-circle">
+        <img src="images/icon-paper.svg" alt="">
+      </div>
+    </div>
+    <div class="two">
+      <div class="rock-circle">
+        <img src="images/icon-rock.svg" alt="">
+      </div>
+    </div>
+    <div class="three">
+      <div class="scissors-circle">
+        <img src="images/icon-scissors.svg" alt="">
+      </div>
+    </div>
+  </div>
+
+    <div class="rules-block">
+      <button id="myBtn" class="rules-button"><h6>RULES</h6></button>
+    </div>
+
+    <div class="fight-block-one">
+      <div class="fight-title">
+        <div class="you"><p>YOU PICKED</p></div>
+        <div class="them"><p>THE HOUSE PICKED</p></div>
+      </div>
+      <div class="inner-fight-block">
+        <div class="fight-circle-paper">
+          <img class="fight-img" src="images/icon-paper.svg" alt="">
+        </div>
+        <div class="opponent-circle">
+          <img class="opponent-fight-img" src="images/icon-rock.svg" alt="">
+        </div>
+      </div>
+    </div>
+    <div class="fight-block-two">
+      <div class="fight-title">
+        <div class="you"><p>YOU PICKED</p></div>
+        <div class="them"><p>THE HOUSE PICKED</p></div>
+      </div>
+      <div class="inner-fight-block">
+        <div class="fight-circle-rock">
+          <img class="fight-img" src="images/icon-rock.svg" alt="">
+        </div>
+        <div class="opponent-circle">
+          <img class="opponent-fight-img" src="images/icon-spock.svg" alt="">
+        </div>
+      </div>
+    </div>
+    <div class="fight-block-three">
+      <div class="fight-title">
+        <div class="you"><p>YOU PICKED</p></div>
+        <div class="them"><p>THE HOUSE PICKED</p></div>
+      </div>
+      <div class="inner-fight-block">
+        <div class="fight-circle-scissors">
+          <img class="fight-img" src="images/icon-scissors.svg" alt="">
+        </div>
+        <div class="opponent-circle">
+          <img class="opponent-fight-img" src="images/icon-scissors.svg" alt="">
+        </div>
+      </div>
+      </div>
+
+    <button class="next-btn"><h4 class="next-text">RESULT</h4></button>
+
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-top">
+        <h3 class="modal-title">RULES</h3>
+        <span class="close">&times;</span>
+      </div>
+      <img class="rules-img" src="images/image-rules.svg" alt="">
+    </div>
+  </div>
+
+  <div class="end">
+    <div class="show-result">
+      <h1 class="winner">RESULT</h1>
+      <a href="index.html"><button class="again"><h4>PLAY AGAIN</h4></button></a>
+    </div>
+  </div>
+
+
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="index.js" charset="utf-8"></script>
+
+</body>
+</html>
